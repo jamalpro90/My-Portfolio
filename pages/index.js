@@ -1,11 +1,19 @@
 import Head from 'next/head';
+import About from '../components/About';
+import Hero from '../components/Hero';
 import Navbar from '../components/Navbar';
+import Projects from '../components/Projects';
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Portfolio</title>
+      </Head>
       <Navbar />
-      <h1 className="text-5xl text-center font-bold text-blue-500">My Portfolio</h1>
+      <Hero />
+      <About />
+      <Projects />
     </>
   );
 }

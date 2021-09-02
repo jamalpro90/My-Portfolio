@@ -12,6 +12,11 @@ module.exports = {
         'r-slab': 'Roboto Slab, serif',
         'u-mono': 'Ubuntu Mono, monospace',
       },
+      colors: {
+        'black-111': '#111111',
+        'black-222': '#222222',
+        'black-09': '#090909',
+      },
     },
   },
   variants: {
