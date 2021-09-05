@@ -5,7 +5,13 @@ module.exports = {
   theme: {
     extend: {
       container: {
-        padding: '4rem',
+        padding: {
+          DEFAULT: '0.3rem',
+          sm: '1rem',
+          lg: '4rem',
+          xl: '5rem',
+          '2xl': '6rem',
+        },
       },
       fontFamily: {
         r: 'Roboto, sans-serif',
@@ -16,6 +22,17 @@ module.exports = {
         'black-111': '#111111',
         'black-222': '#222222',
         'black-09': '#090909',
+        'black-1c': '#1c1c1c',
+      },
+      screens: {
+        tablet: '640px',
+        // => @media (min-width: 640px) { ... }
+
+        laptop: '1024px',
+        // => @media (min-width: 1024px) { ... }
+
+        desktop: '1280px',
+        // => @media (min-width: 1280px) { ... }
       },
     },
   },

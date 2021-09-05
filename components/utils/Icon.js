@@ -1,14 +1,17 @@
-export default function Icon({ type, size, className, href, blank }) {
+export default function Icon({ type, size, className, href, blank, order }) {
   const hoverColors = (type) => {
     switch (type) {
       case 'fab fa-whatsapp':
-        return 'hover:text-green-600';
+        return 'hover:text-green-600 dark:hover:text-green-600';
         break;
       case 'fab fa-facebook':
-        return 'hover:text-blue-600';
+        return 'hover:text-blue-600 dark:hover:text-blue-600';
         break;
       case 'fab fa-instagram':
-        return 'hover:text-pink-500';
+        return 'hover:text-pink-500 dark:hover:text-pink-500';
+        break;
+      case 'fas fa-envelope':
+        return 'hover:text-yellow-500 dark:hover:text-yellow-500';
         break;
       default:
         return null;
@@ -36,8 +39,10 @@ export default function Icon({ type, size, className, href, blank }) {
   const hrefLink = href ? href : chooseHref(type);
 
   return (
-    <a href={hrefLink} target={blank && '_blank'} rel="noreferrer">
-      <i className={`icon ${type} ${size} text-black-111 ml-6 cursor-pointer hover:scale-150 transition-all ${hoverColors(type)} ${className}`}></i>
+    <a href={hrefLink} target={blank && '_blank'} rel="noreferrer" className={order}>
+      <i className={`icon ${type} ${size} text-black-111 dark:text-gray-50 mx-4 cursor-pointer hover:scale-150 transition-all ${hoverColors(type)} ${className}`}></i>
     </a>
   );
 }
+
+// ${hoverColors(type)}

@@ -26,6 +26,24 @@ a {
 /* Navbar */
 .navbar {
   transition: 0.6s;
+  height: 52px;
+}
+
+.navbar .ham-menu {
+  display: none;
+}
+
+.navbar .nav-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar .ham-menu {
+    display: flex;
+  }
+  .navbar ul.nav-des {
+    display: none;
+  }
 }
 
 /* Hero */
@@ -33,7 +51,7 @@ a {
   background-image: url('/img/back-dark.png');
   background-size: cover;
   height: 100vh;
-  position: relative;
+  /* position: relative; */
 }
 
 .hero .icon {
@@ -47,9 +65,29 @@ a {
   height: 100vh;
 }
 
+@media screen and (max-width: 768px) {
+  .about .about-content {
+    flex-direction: column;
+  }
+
+  .about .about-content .left {
+    /* border: 2px solid red; */
+    transform: translateY(350px);
+  }
+
+  .about .about-content .right {
+    /* border: 2px solid blue; */
+    transform: translateY(-200px);
+  }
+
+  .about .about-content .button {
+    order: 3;
+  }
+}
+
 /* Projects */
 .projects {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .active {
@@ -77,6 +115,36 @@ a {
   color: #eee;
   transform: scale(1.7) translateY(-50px);
   cursor: pointer;
-  /* border: 2px solid white; */
   padding: 0 5px;
+}
+
+/* Skills */
+.skills {
+  height: 100vh;
+}
+
+/* Contact */
+.contact {
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+  .contact .contact-content {
+    flex-direction: column;
+  }
+
+  .contact .left {
+    /* border: 2px solid red; */
+    transform: translateY(500px);
+  }
+
+  .contact .right {
+    /* border: 2px solid blue; */
+    align-items: center;
+    transform: translateY(-400px);
+  }
+}
+
+/* Footer */
+footer {
 }
