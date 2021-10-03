@@ -111,10 +111,10 @@ export default function Projects() {
       <div className="container mx-auto py-14">
         {/* section title */}
         <SectionTitle title="PROJECTS" />
-        <ul className="flex justify-center font-u-mono font-bold text-xl py-6">
+        <ul className="flex justify-evenly font-u-mono font-bold text-xl py-6 flex-wrap">
           {/* project list group */}
           {listGroup.map((list) => (
-            <li key={list.id} className={`px-3 mx-3 dark:text-gray-50 rounded cursor-pointer transition duration-300 ${selected === list.id && 'active'}`} onClick={() => setSelected(list.id)}>
+            <li key={list.id} className={`px-3 mx-3 mb-3 dark:text-gray-50 rounded cursor-pointer transition duration-300 ${selected === list.id && 'active'}`} onClick={() => setSelected(list.id)}>
               {list.title}
             </li>
           ))}

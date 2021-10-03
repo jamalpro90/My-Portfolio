@@ -15,23 +15,23 @@ export default function Contact() {
           <h3 className="font-u-mono font-bold text-xl dark:text-gray-50 mb-10 text-center">Another option to contact me :</h3>
           <div className="flex items-center mt-2 md:-ml-6 md:text-sm lg:text-base">
             <Icon type="fas fa-envelope" size="text-3xl" className="mr-3" />
-            <p className="dark:text-gray-50">jamalpro90@gmail.com</p>
+            <p className="dark:text-gray-50 text-sm sm:text-base">jamalpro90@gmail.com</p>
           </div>
           <div className="flex items-center mt-2 md:-ml-6 md:text-sm lg:text-base">
             <Icon type="fab fa-facebook" size="text-3xl" className="mr-3" blank />
-            <p className="dark:text-gray-50">facebook.com/Jamal.Pebisnis.Sukses</p>
+            <p className="dark:text-gray-50 text-sm sm:text-base">Jamal Jenius</p>
           </div>
           <div className="flex items-center mt-2 md:-ml-6 md:text-sm lg:text-base">
             <Icon type="fab fa-whatsapp" size="text-3xl" className="mr-3" blank />
-            <p className="dark:text-gray-50">+62 819-3693-4925</p>
+            <p className="dark:text-gray-50 text-sm sm:text-base">+62 819-3693-4925</p>
           </div>
           <div className="flex items-center mt-2 md:-ml-6 md:text-sm lg:text-base">
             <Icon type="fab fa-github" size="text-3xl" className="mr-3" blank />
-            <p className="dark:text-gray-50">https://github.com/jamalpro90</p>
+            <p className="dark:text-gray-50 text-sm sm:text-base">jamalpro90</p>
           </div>
           <div className="flex items-center mt-2 md:-ml-6 md:text-sm lg:text-base">
             <Icon type="fab fa-instagram" size="text-3xl" className="mr-3" blank />
-            <p className="dark:text-gray-50">https://www.instagram.com/jamaljenius/</p>
+            <p className="dark:text-gray-50 text-sm sm:text-base">jamaljenius</p>
           </div>
         </div>
         {/* section contact right */}
