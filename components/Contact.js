@@ -32,7 +32,7 @@ export default function Contact() {
   };
 
   return (
-    <div id="contact" className="contact container mx-auto py-14">
+    <div id="contact" className="contact container mx-auto py-14 pt-24">
       <SectionTitle title="CONTACT" />
       {/* pembungkus section left & right */}
       <div className="flex h-full pt-6 contact-content">

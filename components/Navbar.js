@@ -86,19 +86,29 @@ export default function Navbar({ theme, setTheme }) {
             )}
           </li>
           <li className="py-3 transition duration-200 hover:bg-white hover:text-blue-700 dark:hover:text-black  hover:rounded-lg px-3 my-1">
-            <a href="#">Home</a>
+            <a onClick={handleHamMenu} href="#">
+              Home
+            </a>
           </li>
           <li className="py-3 transition duration-200 hover:bg-white hover:text-blue-700 dark:hover:text-black  hover:rounded-lg px-3 my-1">
-            <a href="#about">About</a>
+            <a onClick={handleHamMenu} href="#about">
+              About
+            </a>
           </li>
           <li className="py-3 transition duration-200 hover:bg-white hover:text-blue-700 dark:hover:text-black  hover:rounded-lg px-3 my-1">
-            <a href="#projects">Projects</a>
+            <a onClick={handleHamMenu} href="#projects">
+              Projects
+            </a>
           </li>
           <li className="py-3 transition duration-200 hover:bg-white hover:text-blue-700 dark:hover:text-black  hover:rounded-lg px-3 my-1">
-            <a href="#skills">Skills</a>
+            <a onClick={handleHamMenu} href="#skills">
+              Skills
+            </a>
           </li>
           <li className="py-3 transition duration-200 hover:bg-white hover:text-blue-700 dark:hover:text-black  hover:rounded-lg px-3 my-1">
-            <a href="#contact">Contact</a>
+            <a onClick={handleHamMenu} href="#contact">
+              Contact
+            </a>
           </li>
         </ul>
       </div>
