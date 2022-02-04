@@ -24,29 +24,6 @@ a {
   box-sizing: border-box;
 }
 
-/* Navbar */
-.navbar {
-  transition: 0.6s;
-  height: 52px;
-}
-
-.navbar .ham-menu {
-  display: none;
-}
-
-.navbar .nav-mobile {
-  display: none;
-}
-
-@media screen and (max-width: 768px) {
-  .navbar .ham-menu {
-    display: flex;
-  }
-  .navbar ul.nav-des {
-    display: none;
-  }
-}
-
 /* Hero */
 .hero {
   background-image: url("/img/back-dark.png");

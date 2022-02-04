@@ -1,137 +1,107 @@
-import React, { useEffect, useRef, useState } from "react";
-// import NavMobile from './utils/NavMobile';
+import { useState, useRef } from "react";
 
-export default function Navbar() {
-  const navbar = useRef();
+export default function Navbar({ theme, setTheme }) {
+  // const [theme, setTheme] = useState("");
+  const [navIcon, setNavIcon] = useState(false);
   const navMobile = useRef();
-  const [scrollY, setScrollY] = useState(0);
-  const [themeS, setThemeS] = useState("fa-sun");
 
-  useEffect(() => {
-    const theme = localStorage.getItem("theme");
-    document.querySelector("html").classList.add(theme);
-    setThemeS(theme === "dark" ? "fa-moon" : "fa-sun");
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener("scroll", function () {
-      setScrollY(parseInt(window.scrollY));
-      const navbarHeight = navbar.current.clientHeight;
-      navbar.current.classList.toggle("bg-blue-600", scrollY > navbarHeight);
-      navbar.current.classList.toggle(
-        "dark:bg-black-09",
-        scrollY > navbarHeight
-      );
-    });
-  }, [scrollY]);
-
-  const defaultTheme = () => {
-    const html = document.querySelector("html");
-    if (html.classList.value === "light") {
-      return "dark";
-    } else if (html.classList.value === "dark") {
-      return "light";
+  const handleChangeTheme = () => {
+    // const theme = ;
+    if (localStorage.theme === "dark") {
+      document.documentElement.classList.remove("dark");
+      localStorage.theme = "light";
+      setTheme("light");
     } else {
-      return "dark";
+      document.documentElement.classList.add("dark");
+      localStorage.theme = "dark";
+      setTheme("dark");
     }
   };
 
-  const handleTheme = value => {
-    localStorage.setItem("theme", value);
-    const theme = localStorage.getItem("theme");
-    const html = document.querySelector("html");
-    html.classList.add(theme);
-    if (theme === "light") {
-      html.classList.remove("dark");
-      html.classList.remove("null");
-    } else {
-      html.classList.remove("light");
-      html.classList.remove("null");
-    }
-    setThemeS(theme === "dark" ? "fa-moon" : "fa-sun");
-  };
-
-  const mobileMenu = e => {
-    if (e.target.classList.contains("fa-bars")) {
-      e.target.classList.remove("fa-bars");
-      e.target.classList.add("fa-times");
-      // navMobile.current.classList.add('active');
-      navMobile.current.style.transform = "translateY(0)";
-      navMobile.current.style.display = "flex";
-    } else {
-      e.target.classList.add("fa-bars");
-      e.target.classList.remove("fa-times");
-      // navMobile.current.classList.remove('active');
-      navMobile.current.style.transform = "translateY(-310px)";
-      navMobile.current.style.display = "none";
-    }
+  const handleHamMenu = () => {
+    const top = "translate-y-[375px]";
+    setNavIcon(!navIcon);
+    navMobile.current.classList.toggle(top);
   };
 
   return (
-    <div ref={navbar} className="navbar w-full fixed z-10 top-0">
-      {/* Navbar */}
-      <div className="container mx-auto flex justify-between items-center py-2">
-        {/* Logo */}
-        <h3 className="font-u-mono text-3xl font-semibold text-white tracking-wide">
-          JAMAL
-        </h3>
-
-        {/* Nav */}
-        <ul className="nav-des text-xl font-semibold font-u-mono text-white flex cursor-pointer tracking-wide">
-          <li className="ml-10" onClick={() => handleTheme(defaultTheme())}>
-            <i className={`fas ${themeS}`}></i>
+    <>
+      {/* Desktop Navbar */}
+      <div className="transition duration-200 navbar-desktop md:bg-blue-700 md:dark:bg-black-111 fixed left-0 right-0 z-40 border-b-2">
+        <ul className="container mx-auto hidden md:flex md:items-center text-white">
+          <li
+            onClick={handleChangeTheme}
+            className="text-xl mr-8 py-2 font-medium cursor-pointer"
+          >
+            {theme === "dark" ? (
+              <i className="fas fa-moon"></i>
+            ) : (
+              <i className="fas fa-sun "></i>
+            )}
           </li>
-          <li className="ml-10">
-            <a href="#hero">Home</a>
+          <li className="text-xl mr-8 py-2 px-3 my-2 cur font-medium transition duration-200 hover:bg-white hover:text-blue-700 dark:hover:text-black  hover:rounded-lg">
+            <a href="#">Home</a>
           </li>
-          <li className="ml-10">
+          <li className="text-xl mr-8 py-2 px-3 my-2 cur font-medium transition duration-200 hover:bg-white hover:text-blue-700 dark:hover:text-black  hover:rounded-lg">
             <a href="#about">About</a>
           </li>
-          <li className="ml-10">
+          <li className="text-xl mr-8 py-2 px-3 my-2 cur font-medium transition duration-200 hover:bg-white hover:text-blue-700 dark:hover:text-black  hover:rounded-lg">
             <a href="#projects">Projects</a>
           </li>
-          <li className="ml-10">
+          <li className="text-xl mr-8 py-2 px-3 my-2 cur font-medium transition duration-200 hover:bg-white hover:text-blue-700 dark:hover:text-black  hover:rounded-lg">
             <a href="#skills">Skills</a>
           </li>
-          <li className="ml-10">
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-
-        {/* ham menu */}
-        <ul
-          className="ham-menu text-3xl font-semibold font-u-mono text-white flex cursor-pointer tracking-wide w-40"
-          onClick={e => mobileMenu(e)}
-        >
-          <li className="ml-10" onClick={() => handleTheme(defaultTheme())}>
-            <i className={`fas ${themeS}`}></i>
-          </li>
-          <li className="ml-10">
-            <i className="fas fa-bars"></i>
-          </li>
-        </ul>
-
-        {/* nav mobile */}
-      </div>
-      <div ref={navMobile} className="nav-mobile bg-blue-600 dark:bg-black-09">
-        <ul className="container mx-auto text-xl font-semibold font-u-mono text-white flex flex-col cursor-pointer tracking-wide">
-          <li className="my-3">
-            <a href="#hero">Home</a>
-          </li>
-          <li className="my-3">
-            <a href="#about">About</a>
-          </li>
-          <li className="my-3">
-            <a href="#projects">Projects</a>
-          </li>
-          <li className="my-3">
-            <a href="#skills">Skills</a>
-          </li>
-          <li className="my-3">
+          <li className="text-xl mr-8 py-2 px-3 my-2 cur font-medium transition duration-200 hover:bg-white hover:text-blue-700 dark:hover:text-black  hover:rounded-lg">
             <a href="#contact">Contact</a>
           </li>
         </ul>
       </div>
-    </div>
+
+      {/* Ham Menu */}
+      <div className="transition duration-200 ham-menu md:hidden bg-blue-700 dark:bg-black-111 border-b-[2px] border-white fixed left-0 right-0 top-0 z-50">
+        <div className="container mx-auto py-[14px] transition duration-200">
+          <i
+            onClick={handleHamMenu}
+            className={`fas ${
+              navIcon ? "fa-times" : "fa-bars"
+            } text-3xl text-white cursor-pointer pl-3`}
+          ></i>
+        </div>
+      </div>
+
+      {/* Mobile Navbar */}
+      <div
+        ref={navMobile}
+        className={`transition duration-200 navbar-mobile md:hidden bg-blue-700 dark:bg-black-111 fixed z-40 left-0 right-0 border-b-[1px] rounded-br-[60%] top-[-310px]`}
+      >
+        <ul className="container mx-auto text-white text-xl font-500 flex flex-col items-start">
+          <li
+            onClick={handleChangeTheme}
+            className="py-3 pt-5 font-medium cursor-pointer px-3 my-1"
+          >
+            {theme === "dark" ? (
+              <i className="fas fa-moon "></i>
+            ) : (
+              <i className="fas fa-sun "></i>
+            )}
+          </li>
+          <li className="py-3 transition duration-200 hover:bg-white hover:text-blue-700 dark:hover:text-black  hover:rounded-lg px-3 my-1">
+            <a href="#">Home</a>
+          </li>
+          <li className="py-3 transition duration-200 hover:bg-white hover:text-blue-700 dark:hover:text-black  hover:rounded-lg px-3 my-1">
+            <a href="#about">About</a>
+          </li>
+          <li className="py-3 transition duration-200 hover:bg-white hover:text-blue-700 dark:hover:text-black  hover:rounded-lg px-3 my-1">
+            <a href="#projects">Projects</a>
+          </li>
+          <li className="py-3 transition duration-200 hover:bg-white hover:text-blue-700 dark:hover:text-black  hover:rounded-lg px-3 my-1">
+            <a href="#skills">Skills</a>
+          </li>
+          <li className="py-3 transition duration-200 hover:bg-white hover:text-blue-700 dark:hover:text-black  hover:rounded-lg px-3 my-1">
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </>
   );
 }
