@@ -1,82 +1,26 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
+import {
+  allProducts,
+  nextProducts,
+  reactProducts,
+  reactNativeProducts,
+} from "../data";
 import ProjectsCard from "./utils/ProjectsCard";
 import SectionTitle from "./utils/SectionTitle";
 
 export default function Projects() {
-  const allProducts = [
-    {
-      image: "/img/fashion.png",
-      text: "Fashion",
-    },
-    {
-      image: "/img/fashion.png",
-      text: "Javascript",
-    },
-    {
-      image: "/img/fashion.png",
-      text: "Blog",
-    },
-    {
-      image: "/img/fashion.png",
-      text: "React JS",
-    },
-    {
-      image: "/img/fashion.png",
-      text: "React Native",
-    },
-    {
-      image: "/img/fashion.png",
-      text: "Next JS",
-    },
-  ];
-  const javascriptProducts = [
-    {
-      image: "/img/fashion.png",
-      text: "Javascript",
-    },
-    {
-      image: "/img/fashion.png",
-      text: "Count Down",
-    },
-    {
-      image: "/img/fashion.png",
-      text: "Todo List",
-    },
-  ];
-  const reactProducts = [
-    {
-      image: "/img/fashion.png",
-      text: "React",
-    },
-    {
-      image: "/img/fashion.png",
-      text: "Blog",
-    },
-    {
-      image: "/img/fashion.png",
-      text: "React Todos",
-    },
-  ];
-  const reactNativeProducts = [
-    {
-      image: "/img/fashion.png",
-      text: "React Native",
-    },
-    {
-      image: "/img/fashion.png",
-      text: "Money App",
-    },
-  ];
   const [selected, setSelected] = useState("all");
+  const [data, setData] = useState([]);
+
   const listGroup = [
     {
       id: "all",
       title: "All",
     },
     {
-      id: "javascript",
-      title: "Javascript",
+      id: "next-js",
+      title: "Next JS",
     },
     {
       id: "react-js",
@@ -87,15 +31,14 @@ export default function Projects() {
       title: "React Native",
     },
   ];
-  const [data, setData] = useState([]);
 
   useEffect(() => {
     switch (selected) {
       case "all":
         setData(allProducts);
         break;
-      case "javascript":
-        setData(javascriptProducts);
+      case "next-js":
+        setData(nextProducts);
         break;
       case "react-js":
         setData(reactProducts);
@@ -136,7 +79,12 @@ export default function Projects() {
           className="flex flex-wrap w-full justify-center mx-auto"
         >
           {data.map(data => (
-            <ProjectsCard key={data.text} image={data.image} text={data.text} />
+            <ProjectsCard
+              key={data.text}
+              image={data.image}
+              text={data.text}
+              webLink={data.webLink}
+            />
           ))}
         </div>
       </div>
