@@ -8,12 +8,18 @@ import Navbar from "../components/Navbar";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import { useRouter } from "next/router";
+import AOS from "aos";
 
 export default function Home() {
   const [theme, setTheme] = useState("");
   // const router = useRouter();
 
   useEffect(() => {
+    AOS.init({
+      once: true,
+      duration: 1000,
+    });
+
     if (
       localStorage.theme === "dark" ||
       (!("theme" in localStorage) &&

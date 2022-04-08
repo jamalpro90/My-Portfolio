@@ -25,7 +25,7 @@ export default function Navbar({ theme, setTheme }) {
   };
 
   return (
-    <>
+    <div data-aos="fade-down">
       {/* Desktop Navbar */}
       <div className="transition duration-200 navbar-desktop md:bg-blue-700 md:dark:bg-black-111 fixed left-0 right-0 z-40 border-b-2">
         <ul className="container mx-auto hidden md:flex md:items-center text-white">
@@ -112,6 +112,6 @@ export default function Navbar({ theme, setTheme }) {
           </li>
         </ul>
       </div>
-    </>
+    </div>
   );
 }

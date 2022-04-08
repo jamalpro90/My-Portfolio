@@ -111,7 +111,11 @@ export default function Projects() {
       <div className="container mx-auto py-8">
         {/* section title */}
         <SectionTitle title="PROJECTS" />
-        <ul className="flex justify-evenly font-u-mono font-bold text-xl py-6 flex-wrap">
+        <ul
+          data-aos="fade-down"
+          data-aos-delay="500"
+          className="flex justify-evenly font-u-mono font-bold text-xl py-6 flex-wrap"
+        >
           {/* project list group */}
           {listGroup.map(list => (
             <li
@@ -126,7 +130,11 @@ export default function Projects() {
           ))}
         </ul>
         {/* project card container */}
-        <div className="flex flex-wrap w-full justify-center mx-auto">
+        <div
+          data-aos="zoom-in"
+          data-aos-delay="500"
+          className="flex flex-wrap w-full justify-center mx-auto"
+        >
           {data.map(data => (
             <ProjectsCard key={data.text} image={data.image} text={data.text} />
           ))}

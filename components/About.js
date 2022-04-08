@@ -13,7 +13,11 @@ export default function About() {
         {/* section content container */}
         <div className="flex mt-10 h-5/6 about-content">
           {/* section content left */}
-          <div className="flex left justify-center flex-col w-full lg:w-6/12">
+          <div
+            data-aos="fade-up-right"
+            data-aos-delay="500"
+            className="flex left justify-center flex-col w-full lg:w-6/12"
+          >
             <h3 className="text-3xl md:text-4xl lg:text-5xl text-center md:text-left text-black-111 dark:text-gray-50 font-bold font-r-slab">
               My Name Is <span className="text-blue-600">Jamal</span>
             </h3>
@@ -25,10 +29,12 @@ export default function About() {
             </p>
             {/* section button left */}
             <div className="flex items-center justify-center md:justify-start">
-              <Button
-                text="Send Mail"
-                icon={<i className="fas fa-envelope"></i>}
-              />
+              <a href="#contact">
+                <Button
+                  text="Send Mail"
+                  icon={<i className="fas fa-envelope"></i>}
+                />
+              </a>
               <Icon
                 order="order-1"
                 type="fab fa-whatsapp"
@@ -56,7 +62,11 @@ export default function About() {
             </div>
           </div>
           {/* section content right */}
-          <div className="flex right justify-center items-center w-full lg:w-6/12">
+          <div
+            data-aos="fade-up-left"
+            data-aos-delay="500"
+            className="flex right justify-center items-center w-full lg:w-6/12"
+          >
             <Image
               src="/img/jamal.png"
               alt="Profile Picture"
