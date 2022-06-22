@@ -50,7 +50,7 @@ export default function Projects() {
   }, [selected]);
 
   return (
-    <div id="projects" className="projects py-14">
+    <div id="projects" className="projects py-14 overflow-hidden">
       <div className="container mx-auto py-8">
         {/* section title */}
         <SectionTitle title="PROJECTS" />

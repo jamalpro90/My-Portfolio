@@ -3,7 +3,10 @@ import SectionTitle from "./utils/SectionTitle";
 
 export default function Skills() {
   return (
-    <div id="skills" className="skiils py-14 bg-gray-100 dark:bg-black-1c">
+    <div
+      id="skills"
+      className="skiils py-14 bg-gray-100 dark:bg-black-1c overflow-hidden"
+    >
       <div className="container mx-auto py-8">
         <SectionTitle title="SKILLS" />
         <div className="flex justify-center items-center h-5/6 lg:pt-6 sm:pt-10">

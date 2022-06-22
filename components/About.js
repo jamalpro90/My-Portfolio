@@ -6,7 +6,10 @@ import SectionTitle from "./utils/SectionTitle";
 
 export default function About() {
   return (
-    <div id="about" className="about py-14 bg-gray-100 dark:bg-black-1c">
+    <div
+      id="about"
+      className="about  border-red-500 overflow-hidden py-14 bg-gray-100 dark:bg-black-1c"
+    >
       <div className="container mx-auto h-full py-8">
         {/* section title */}
         <SectionTitle title="ABOUT ME" />
@@ -65,7 +68,7 @@ export default function About() {
           <div
             data-aos="fade-up-left"
             data-aos-delay="500"
-            className="flex right justify-center items-center w-full lg:w-6/12"
+            className="flex right justify-center items-center w-full lg:w-6/12 mt-12"
           >
             <Image
               src="/img/jamal.png"
@@ -73,6 +76,7 @@ export default function About() {
               width={273}
               height={303}
               layout="intrinsic"
+              className="rounded-md"
             />
           </div>
         </div>
