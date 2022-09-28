@@ -24,10 +24,16 @@ a {
   box-sizing: border-box;
 }
 
+/* Linear Blue Color */
+.linear-bluee {
+  background: linear-gradient(#3b82f6, #1e40af);
+  box-shadow: 0 10px 30px 5px rgba(0, 66, 253, 0.7);
+}
+
 /* Hero */
 .hero {
-  background-image: url("/img/back-dark.png");
-  background-size: cover;
+  /* background-image: url("/img/back-dark.png");
+  background-size: cover; */
   height: 100vh;
   /* position: relative; */
 }

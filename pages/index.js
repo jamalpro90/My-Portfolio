@@ -41,6 +41,7 @@ export default function Home() {
       <Head>
         <title>Portfolio</title>
       </Head>
+
       {/* website */}
       <Navbar theme={theme} setTheme={setTheme} />
       <Hero />

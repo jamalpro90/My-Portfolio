@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-document-import-in-page */
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -22,9 +22,12 @@ class MyDocument extends Document {
           {/* fonts google */}
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&family=Roboto:wght@300;400;500;700&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&family=Roboto:wght@300;400;500;700&family=Ubuntu+Mono:wght@400;700&display=swap"
+            rel="stylesheet"
+          />
         </Head>
-        <body className="bg-white dark:bg-black-111">
+        <body className="bg-slate-50 dark:bg-black-111">
           <Main />
           <NextScript />
         </body>
