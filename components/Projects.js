@@ -8,6 +8,12 @@ import {
 } from "../data";
 import ProjectsCard from "./utils/ProjectsCard";
 import SectionTitle from "./utils/SectionTitle";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 export default function Projects() {
   const [selected, setSelected] = useState("all");
@@ -51,13 +57,13 @@ export default function Projects() {
 
   return (
     <div id="projects" className="projects py-14 overflow-hidden">
-      <div className="container mx-auto py-8">
+      <div className="container mx-auto py-8 portfolio">
         {/* section title */}
-        <SectionTitle title="PROJECTS" />
+        <SectionTitle title="PROJECTS" position="text-center" />
         <ul
           data-aos="fade-down"
           data-aos-delay="500"
-          className="flex justify-evenly font-u-mono font-bold text-xl py-6 flex-wrap"
+          className="mt-8 lg:mt-16 flex justify-evenly font-u-mono font-bold text-xl py-6 flex-wrap"
         >
           {/* project list group */}
           {listGroup.map(list => (
@@ -74,9 +80,9 @@ export default function Projects() {
         </ul>
         {/* project card container */}
         <div
-          data-aos="zoom-in"
-          data-aos-delay="500"
-          className="flex flex-wrap w-full justify-center mx-auto"
+          // data-aos="zoom-in"
+          // data-aos-delay="500"
+          className="flex flex-wrap mx-auto justify-center items-center max-h-[630px] overflow-auto"
         >
           {data.map(data => (
             <ProjectsCard

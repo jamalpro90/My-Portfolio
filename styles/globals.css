@@ -91,15 +91,19 @@ a {
   transition: 0.6;
 }
 
-.projects .card:hover .img {
-  filter: brightness(60%);
+.projects .card:hover .img-wrapper img {
+  filter: brightness(40%);
 }
 
 .projects .card:hover p {
-  color: #eee;
-  transform: scale(1.7) translateY(-50px);
+  color: white;
+  transform: scale(1.7) translateY(-60px);
   cursor: pointer;
   padding: 0 5px;
+}
+
+.shadow-image {
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* Skills */
