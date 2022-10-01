@@ -9,6 +9,7 @@ import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import { useRouter } from "next/router";
 import AOS from "aos";
+import CircleBackground from "../components/utils/CircleBackground";
 
 export default function Home() {
   const [theme, setTheme] = useState("");
@@ -37,7 +38,7 @@ export default function Home() {
 
   // console.log(themeS);
   return (
-    <>
+    <div className="relative">
       <Head>
         <title>Portfolio</title>
       </Head>
@@ -48,8 +49,17 @@ export default function Home() {
       <About />
       <Projects />
       <Skills />
+
+      {/* Circle Background */}
+      <CircleBackground
+        color="rgba(102, 204, 248, 0.4)"
+        position="bottom-[1000px] -left-48 md:bottom-56 md:-right-56 lg:-left-48 lg:bottom-[600px] scale-90"
+      />
+
       <Contact />
       <Footer />
-    </>
+    </div>
   );
 }
+
+// https://www.youtube.com/watch?v=S5lwvy2TN6w&list=PLzCxunOM5WFIBEfixsIWyqPpaABQ5S8HD&index=22

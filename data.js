@@ -68,3 +68,62 @@ export const reactNativeProducts = [
     text: "Simple Todos",
   },
 ];
+
+export const skillsCardData = [
+  {
+    image: "/img/skill/html.svg",
+    alt: "HTML image",
+    width: 71,
+    height: 100,
+    text: "HTML",
+  },
+  {
+    image: "/img/skill/css.svg",
+    alt: "CSS image",
+    width: 71,
+    height: 100,
+    text: "CSS",
+  },
+  {
+    image: "/img/skill/javascript.svg",
+    alt: "Javascript image",
+    width: 71,
+    height: 100,
+    text: "Javascript",
+  },
+  {
+    image: "/img/skill/bootstrap.svg",
+    alt: "Bootstrap image",
+    width: 71,
+    height: 100,
+    text: "Bootstrap",
+  },
+  {
+    image: "/img/skill/react.svg",
+    alt: "React JS image",
+    width: 71,
+    height: 100,
+    text: "React JS",
+  },
+  {
+    image: "/img/skill/next.svg",
+    alt: "Next JS image",
+    width: 71,
+    height: 100,
+    text: "Next JS",
+  },
+  {
+    image: "/img/skill/tailwind.svg",
+    alt: "Tailwind image",
+    width: 71,
+    height: 100,
+    text: "Tailwind",
+  },
+  {
+    image: "/img/skill/figma.svg",
+    alt: "Figma image",
+    width: 71,
+    height: 100,
+    text: "Figma",
+  },
+];

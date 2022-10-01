@@ -8,6 +8,7 @@ import {
 } from "../data";
 import ProjectsCard from "./utils/ProjectsCard";
 import SectionTitle from "./utils/SectionTitle";
+import CircleBackground from "./utils/CircleBackground";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import "swiper/css";
@@ -56,7 +57,13 @@ export default function Projects() {
   }, [selected]);
 
   return (
-    <div id="projects" className="projects py-14 overflow-hidden">
+    <div id="projects" className="projects py-0 overflow-hidden relative">
+      {/* Circle Background */}
+      <CircleBackground
+        color="rgba(247, 143, 75, 0.4)"
+        position="bottom-48 -left-40 md:bottom-56 md:-right-56 lg:-left-48 lg:bottom-20 scale-90"
+      />
+
       <div className="container mx-auto py-8 portfolio">
         {/* section title */}
         <SectionTitle title="PROJECTS" position="text-center" />

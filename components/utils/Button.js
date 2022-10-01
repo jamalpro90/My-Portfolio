@@ -6,7 +6,7 @@ export default function Button({ text, icon, textSize, order }) {
     <button
       className={`px-6 py-2 linear-bluee text-white rounded-[50px] ${
         textSize ? textSize : "text-base"
-      } font-medium`}
+      } font-medium mx-4`}
     >
       {icon && <span className="mr-2 text-lg">{icon}</span>}
       {text}
