@@ -50,13 +50,20 @@ export default function Home() {
       <Projects />
       <Skills />
 
-      {/* Circle Background */}
+      {/* Circle Background Skills - Contact */}
       <CircleBackground
         color="rgba(102, 204, 248, 0.4)"
         position="bottom-[1000px] -left-48 md:bottom-56 md:-right-56 lg:-left-48 lg:bottom-[600px] scale-90"
       />
 
       <Contact />
+
+      {/* Circle Background Contact - Footer */}
+      <CircleBackground
+        color="rgba(245, 102, 248, 0.4)"
+        position="bottom-[0px] -right-48 md:bottom-56 md:-right-56 lg:-left-48 lg:bottom-[600px] scale-90"
+      />
+
       <Footer />
     </div>
   );

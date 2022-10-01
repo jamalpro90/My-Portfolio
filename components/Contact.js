@@ -7,7 +7,6 @@ import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const form = useRef();
-  const inputRef = useRef();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -44,97 +43,47 @@ export default function Contact() {
     setMessage("");
   };
 
-  const handleFocusName = () => {
-    // console.log();
-    inputRef.current.childNodes[0].childNodes[1].focus();
-  };
-
   return (
     <div
       id="contact"
       className="contact container mx-auto py-14 pt-24 overflow-hidden"
     >
-      <SectionTitle title="CONTACT" />
       {/* pembungkus section left & right */}
-      <div className="flex h-full pt-6 contact-content">
-        {/* section contact left */}
-        <div
-          data-aos="zoom-in-left"
-          data-aos-delay="500"
-          className="sm:w-full lg:w-6/12 flex flex-col py-8 px-10 left"
-        >
-          <h3
-            data-aos="fade-up"
-            data-aos-delay="500"
-            className="font-u-mono font-bold text-xl dark:text-gray-50 mb-10 text-center"
-          >
-            Another option to contact me :
-          </h3>
-          <div className="flex items-center mt-2 md:-ml-6 md:text-sm lg:text-base">
-            <div onClick={handleFocusName}>
-              <Icon type="fas fa-envelope" size="text-3xl" className="mr-3" />
-            </div>
-            <p className="dark:text-gray-50 text-sm sm:text-base">
-              jamalpro90@gmail.com
-            </p>
-          </div>
-          <div className="flex items-center mt-2 md:-ml-6 md:text-sm lg:text-base">
-            <Icon
-              type="fab fa-facebook"
-              size="text-3xl"
-              className="mr-3"
-              blank
+      <div className="lg:flex h-full pt-6">
+        {/* Right Or Top */}
+        <div className="flex-1 lg:order-2 pl-10">
+          {/* Title */}
+          <SectionTitle title="CONTACT" />
+          {/* Desc */}
+          <p className="text-base font-r text-black-222 dark:text-gray-300 mt-6 mb-6 mx-4 xl:w-10/12">
+            Jika anda tertarik untuk bekerja dengan saya atau ingin
+            memperkerjakan saya bisa hubungi saya lewat form email di samping
+            berikut, atau juga bisa lewat Whatsapp saya.
+          </p>
+          <a href="#contact">
+            <Button
+              text="Download CV"
+              icon={<i className="fas fa-file-download"></i>}
             />
-            <p className="dark:text-gray-50 text-sm sm:text-base">
-              Jamal Jenius
-            </p>
-          </div>
-          <div className="flex items-center mt-2 md:-ml-6 md:text-sm lg:text-base">
-            <Icon
-              type="fab fa-whatsapp"
-              size="text-3xl"
-              className="mr-3"
-              blank
-            />
-            <p className="dark:text-gray-50 text-sm sm:text-base">
-              +62 819-3693-4925
-            </p>
-          </div>
-          <div className="flex items-center mt-2 md:-ml-6 md:text-sm lg:text-base">
-            <Icon type="fab fa-github" size="text-3xl" className="mr-3" blank />
-            <p className="dark:text-gray-50 text-sm sm:text-base">jamalpro90</p>
-          </div>
-          <div className="flex items-center mt-2 md:-ml-6 md:text-sm lg:text-base">
-            <Icon
-              type="fab fa-instagram"
-              size="text-3xl"
-              className="mr-3"
-              blank
-            />
-            <p className="dark:text-gray-50 text-sm sm:text-base">
-              jamaljenius
-            </p>
-          </div>
+          </a>
         </div>
 
-        {/* section contact right */}
+        {/* Left Or Bottom */}
         <form
-          data-aos="zoom-in-left"
-          data-aos-delay="500"
+          // data-aos="zoom-in-left"
+          // data-aos-delay="500"
           ref={form}
           onSubmit={e => handleSendEmail(e)}
-          className="sm:w-full lg:w-6/12 flex flex-col py-6 px-10 right"
+          className="sm:w-full lg:w-6/12 flex flex-col py-6 px-10 xl:px-20  mt-16 lg:mt-0 lg:order-1"
         >
-          <div ref={inputRef}>
-            <Input
-              value={name}
-              onChange={e => setName(e.target.value)}
-              type="text"
-              label="Name"
-              name="name"
-              place="Enter Name"
-            />
-          </div>
+          <Input
+            value={name}
+            onChange={e => setName(e.target.value)}
+            type="text"
+            label="Name"
+            name="name"
+            place="Enter Name"
+          />
 
           <Input
             value={email}
@@ -152,9 +101,7 @@ export default function Contact() {
             name="message"
             place="Enter Message"
           />
-          <div className=" w-10/12">
-            <Button text="submit" textSize="font-u-mono font-bold text-xl" />
-          </div>
+          <Button text="submit" textSize=" text-xl self-center mt-4" />
         </form>
       </div>
     </div>

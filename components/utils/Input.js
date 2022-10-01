@@ -10,12 +10,12 @@ export default function Input({
   onChange,
 }) {
   const classInput =
-    "rounded outline-none mt-3 bg-gray-100 p-3 border border-black-111 dark:border-white dark:bg-black-222 dark:text-gray-50";
+    "rounded-[10px] outline-none mt-3 bg-gray-100 p-3 border-[3px] border-blue-700 dark:bg-black-222 dark:text-gray-50";
 
   return (
-    <div className="flex flex-col w-10/12 mt-4">
+    <div className="flex flex-col w-full mb-6">
       <label
-        className="font-u-mono font-bold text-xl dark:text-gray-50 tracking-wide"
+        className="font-r font-normal text-xl dark:text-gray-50 tracking-wide"
         htmlFor={name}
       >
         {label}

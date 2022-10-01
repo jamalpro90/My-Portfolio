@@ -28,6 +28,12 @@ a {
 .linear-bluee {
   background: linear-gradient(#3b82f6, #1e40af);
   box-shadow: 0 10px 30px 5px rgba(0, 66, 253, 0.7);
+  transition: all 0.3s;
+}
+
+.linear-bluee:hover {
+  background: #f8fafc;
+  color: rgb(29, 78, 216);
 }
 
 /* Hero */
@@ -116,23 +122,11 @@ a {
   min-height: 100vh;
 }
 
-@media screen and (max-width: 768px) {
-  .contact .contact-content {
-    flex-direction: column;
-  }
-
-  .contact .left {
-    /* border: 2px solid red; */
-    transform: translateY(500px);
-  }
-
-  .contact .right {
-    /* border: 2px solid blue; */
-    align-items: center;
-    transform: translateY(-400px);
-  }
-}
-
 /* Footer */
-/* footer {
-} */
+footer .top {
+  background-image: url("../public/img/wave.svg") !important;
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+  width: 100vw;
+  height: fit-content;
+}
