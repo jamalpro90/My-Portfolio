@@ -1,4 +1,4 @@
-export default function Button({ text, icon, textSize, order }) {
+export default function Button({ text, icon, textSize }) {
   const submitForm =
     text == "submit" && "mt-3 lg:w-4/12 w-full justify-center ml-auto";
 

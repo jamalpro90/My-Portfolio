@@ -38,7 +38,7 @@ export default function Home() {
 
   // console.log(themeS);
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden">
       <Head>
         <title>Portfolio</title>
       </Head>

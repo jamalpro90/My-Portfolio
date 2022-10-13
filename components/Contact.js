@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import Button from "./utils/Button";
-import Icon from "./utils/Icon";
 import Input from "./utils/Input";
 import SectionTitle from "./utils/SectionTitle";
 import emailjs from "@emailjs/browser";
@@ -51,7 +50,7 @@ export default function Contact() {
       {/* pembungkus section left & right */}
       <div className="lg:flex h-full pt-6">
         {/* Right Or Top */}
-        <div className="flex-1 lg:order-2 pl-10">
+        <div className="flex-1 lg:order-2 lg:pl-10">
           {/* Title */}
           <SectionTitle title="CONTACT" />
           {/* Desc */}
@@ -62,7 +61,11 @@ export default function Contact() {
           </p>
           <a href="#contact">
             <Button
-              text="Download CV"
+              text={
+                <a href="/cv.pdf" download>
+                  Download CV
+                </a>
+              }
               icon={<i className="fas fa-file-download"></i>}
             />
           </a>

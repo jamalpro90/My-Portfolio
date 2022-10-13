@@ -29,7 +29,11 @@ export default function Skills() {
           </p>
           <a href="#contact">
             <Button
-              text="Download CV"
+              text={
+                <a href="/cv.pdf" download>
+                  Download CV
+                </a>
+              }
               icon={<i className="fas fa-file-download"></i>}
             />
           </a>
