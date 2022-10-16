@@ -85,7 +85,7 @@ export default function About() {
           <div
             data-aos="fade-up-left"
             data-aos-delay="500"
-            className="flex right justify-center items-center w-full lg:w-6/12 mt-12 border"
+            className="flex right justify-center items-center w-full lg:w-6/12 mt-12"
           >
             <div className="md:-mt-10 w-full h-[auto]">
               <Image

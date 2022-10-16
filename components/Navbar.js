@@ -15,7 +15,6 @@ export default function Navbar({ theme, setTheme }) {
 
   // Change Background Function
   const changeBackground = height => {
-    console.log(height);
     if (height > 70) {
       navDesktop.current.classList.add("bg-slate-50");
       navDesktop.current.classList.add("dark:bg-black-111");

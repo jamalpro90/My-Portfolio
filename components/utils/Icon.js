@@ -32,6 +32,8 @@ export default function Icon({ type, size, className, href, blank, order }) {
       case "fab fa-github":
         return "https://github.com/jamalpro90";
         break;
+      case "fas fa-envelope":
+        return "#contact";
       default:
         return null;
     }
@@ -41,7 +43,7 @@ export default function Icon({ type, size, className, href, blank, order }) {
   return (
     <a
       href={hrefLink}
-      target={blank && "_blank"}
+      target={type === "fas fa-envelope" ? "" : "_blank"}
       rel="noreferrer"
       className={order}
     >

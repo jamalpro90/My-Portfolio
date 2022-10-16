@@ -73,8 +73,8 @@ export default function Contact() {
 
         {/* Left Or Bottom */}
         <form
-          // data-aos="zoom-in-left"
-          // data-aos-delay="500"
+          data-aos="zoom-in-left"
+          data-aos-delay="500"
           ref={form}
           onSubmit={e => handleSendEmail(e)}
           className="sm:w-full lg:w-6/12 flex flex-col py-6 px-10 xl:px-20  mt-16 lg:mt-0 lg:order-1"
