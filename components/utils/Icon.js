@@ -43,7 +43,7 @@ export default function Icon({ type, size, className, href, blank, order }) {
   return (
     <a
       href={hrefLink}
-      target={type === "fas fa-envelope" ? "" : "_blank"}
+      target={type === "fas fa-envelope" ? "" : blank ? "_blank" : ""}
       rel="noreferrer"
       className={order}
     >
