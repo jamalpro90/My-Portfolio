@@ -74,7 +74,7 @@ export default function About() {
                 <Icon
                   key={i}
                   type={data.type}
-                  size="text-2xl lg:text-3xl text-white cursor-pointer pl-4"
+                  size="text-2xl lg:text-3xl cursor-pointer pl-4"
                   blank
                 />
               ))}
