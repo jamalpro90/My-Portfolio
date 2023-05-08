@@ -7,7 +7,7 @@ import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 import AOS from "aos";
 import CircleBackground from "../components/utils/CircleBackground";
 

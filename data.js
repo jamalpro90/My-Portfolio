@@ -2,12 +2,12 @@ export const allProducts = [
   {
     image: "/img/projects/travja.png",
     text: "Travja",
-    webLink: "https://jamalpro90.github.io/simple-travel/",
+    webLink: "https://jamalpro90.github.io/travja/",
   },
   {
     image: "/img/projects/simple-todo-react.png",
     text: "Simple Todos",
-    webLink: "https://simplee-todos-app.netlify.app/",
+    webLink: "https://simplee-todos.netlify.app/",
   },
   {
     image: "/img/projects/next-frozen-foods.png",
